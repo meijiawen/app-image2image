@@ -31,5 +31,5 @@ gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label=
     gr.Slider(label='Strength', minimum = .1, maximum = 2, step = .05, value = .5)], 
     outputs = 'image', 
     title = "Instructions Picture to Picture",
-    description = "MUST Be .PNG and 512x512 or 768x768</b>) enter a Prompt, or let it just do its Thing, then click submit. 10 Iterations takes about ~900-1200 seconds currently. For more informationon about Stable Diffusion or Suggestions for prompts, keywords, artists or styles see https://github.com/Maks-s/sd-akashic", 
+    description = "MUST Be .PNG and 512x512 or 768x768</b>) enter a Prompt telling the AI how to change the image, then click submit. 10 Iterations takes about ~600-700 seconds currently.", 
     article = "Code Monkey: <a href=\"https://huggingface.co/Manjushri\">Manjushri</a>").queue(max_size=5).launch(debug=True)
