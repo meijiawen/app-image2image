@@ -29,6 +29,7 @@ gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label=
     gr.Slider(1, 20, value = 5, step = 1, label = 'Number of Iterations'),
     gr.Slider(label = "Seed", minimum = 0, maximum = 987654321987654321, step = 1, randomize = True), 
     gr.Slider(label='Strength', minimum = .1, maximum = 2, step = .05, value = .5)], 
-    outputs='image', 
+    outputs = 'image', 
+    title = "Instructions Picture to Picture",
     description = "MUST Be .PNG and 512x512 or 768x768</b>) enter a Prompt, or let it just do its Thing, then click submit. 10 Iterations takes about ~900-1200 seconds currently. For more informationon about Stable Diffusion or Suggestions for prompts, keywords, artists or styles see https://github.com/Maks-s/sd-akashic", 
     article = "Code Monkey: <a href=\"https://huggingface.co/Manjushri\">Manjushri</a>").queue(max_size=5).launch(debug=True)
