@@ -25,7 +25,7 @@ def infer(source_img, instructions, guide, steps, seed, Strength):
 
 gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label="Raw Image. Must Be .png"), 
     gr.Textbox(label = 'Prompt Input Text. 77 Token (Keyword or Symbol) Maximum'),
-    gr.Slider(2, 15, value = 7, label = 'Guidance Scale'),
+    gr.Slider(2, 15, value = 7.5, label = 'Guidance Scale'),
     gr.Slider(1, 20, value = 5, step = 1, label = 'Number of Iterations'),
     gr.Slider(label = "Seed", minimum = 0, maximum = 987654321987654321, step = 1, randomize = True), 
     gr.Slider(label='Strength', minimum = 1, maximum = 2, step = .25, value = 1.5)], 
