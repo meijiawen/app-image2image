@@ -28,7 +28,7 @@ gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label=
     gr.Slider(2, 15, value = 7, label = 'Guidance Scale'),
     gr.Slider(1, 20, value = 5, step = 1, label = 'Number of Iterations'),
     gr.Slider(label = "Seed", minimum = 0, maximum = 987654321987654321, step = 1, randomize = True), 
-    gr.Slider(label='Strength', minimum = .1, maximum = 2, step = .05, value = .5)], 
+    gr.Slider(label='Strength', minimum = 1, maximum = 2, step = .25, value = 1.5)], 
     outputs = 'image', 
     title = "Instructions Picture to Picture",
     description = "Simply upload an image you want to edit, MUST Be .PNG and 512x512 or 768x768, then enter a Prompt telling the AI how to change the image, then click submit. 10 Iterations takes about ~480 seconds currently. This version has no NSFW filter.", 
