@@ -6,7 +6,7 @@ from diffusers import StableDiffusionInstructPix2PixPipeline
 
 model_id = "timbrooks/instruct-pix2pix"
 device = "cuda" if torch.cuda.is_available() else "cpu"
-pipe = StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id, torch_dtype=torch.float16, revision="fp16") if torch.cuda.is_available() else StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id)
+pipe = StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id, torch_dtype=torch.float16, revision="fp16", safety_checker=None) if torch.cuda.is_available() else StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id, safety_checker=None)
 pipe = pipe.to(device)
 
 def resize(value,img):
