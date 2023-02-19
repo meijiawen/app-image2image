@@ -1,3 +1,4 @@
+-f --extra-index-url https://download.pytorch.org/whl/cu116
 torch
 torchvision
 transformers
