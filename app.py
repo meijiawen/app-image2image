@@ -31,5 +31,5 @@ gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label=
     gr.Slider(label='Strength', minimum = 1, maximum = 2, step = .25, value = 1.5)], 
     outputs = 'image', 
     title = "Instructions Picture to Picture",
-    description = "Simply upload an image you want to edit, MUST Be .PNG and 512x512 or 768x768, then enter a Prompt telling the AI how to change the image, then click submit. 10 Iterations takes about ~480 seconds currently. This version has no NSFW filter.", 
+    description = "Simply upload an image you want to edit, MUST Be .PNG and 512x512 or 768x768, then enter a Prompt telling the AI how to change the image, then click submit. This version runs on GPU or CPU and is currently running on the free CPU tier. 10 Iterations takes about ~660 seconds currently. This version has no NSFW filter.", 
     article = "Code Monkey: <a href=\"https://huggingface.co/Manjushri\">Manjushri</a>").queue(max_size=5).launch(debug=True)
