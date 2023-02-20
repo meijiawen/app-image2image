@@ -6,3 +6,4 @@ transformers
 accelerate
 ftfy
 git+https://github.com/huggingface/diffusers
+modin[all]
