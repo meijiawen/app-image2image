@@ -1,4 +1,5 @@
 import gradio as gr
+import modin.pandas as pd
 import torch
 import numpy as np
 from PIL import Image
