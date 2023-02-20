@@ -24,12 +24,12 @@ def infer(source_img, instructions, guide, steps, seed, Strength):
     return image
 
 gr.Interface(fn=infer, inputs=[gr.Image(source="upload", type="filepath", label="Raw Image. Must Be .png"), 
-    gr.Textbox(label = 'Prompt Input Text. 77 Token (Keyword or Symbol) Maximum'),
-    gr.Slider(2, 15, value = 7.5, label = 'Guidance Scale'),
-    gr.Slider(1, 20, value = 5, step = 1, label = 'Number of Iterations'),
+    gr.Textbox(label = 'Input Instructions. 77 Token (Keyword or Symbol) Maximum'),
+    gr.Slider(2, 15, value = 7.5, label = 'Instructions Strength:'),
+    gr.Slider(1, 20, value = 5, step = 1, label = "Number of Iterations: More take longer, but aren't always better"),
     gr.Slider(label = "Seed", minimum = 0, maximum = 987654321987654321, step = 1, randomize = True), 
-    gr.Slider(label='Strength', minimum = 1, maximum = 2, step = .25, value = 1.5)], 
+    gr.Slider(label='Original Image Strength:', minimum = 1, maximum = 2, step = .25, value = 1.5)], 
     outputs = 'image', 
     title = "Instructions Picture to Picture",
-    description = "Simply upload an image you want to edit, MUST Be .PNG and 512x512 or 768x768, then enter a Prompt telling the AI how to change the image, then click submit. This version runs on GPU or CPU and is currently running on the free CPU tier. 10 Iterations takes ~660 seconds currently. This version has no NSFW filter.", 
+    description = "Simply upload an image you want to edit, MUST Be .PNG and 512x512 or 768x768, then enter a Prompt telling the AI how to change the image, then click submit. This version runs on GPU or CPU and is currently running on the free CPU tier. 10 Iterations takes ~480 seconds currently. This version has no NSFW filter.", 
     article = "Code Monkey: <a href=\"https://huggingface.co/Manjushri\">Manjushri</a>").queue(max_size=5).launch(debug=True)
