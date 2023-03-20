@@ -1,4 +1,3 @@
-#-f --extra-index-url https://download.pytorch.org/whl/cu116
 torch
 numpy
 torchvision
@@ -7,4 +6,3 @@ accelerate
 ftfy
 git+https://github.com/huggingface/diffusers
 modin[all]
-#xformers
