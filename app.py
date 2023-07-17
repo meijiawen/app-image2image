@@ -1,6 +1,7 @@
 import gradio as gr
 from PIL import Image
 from io import BytesIO
+import openxlab
 from openxlab.model import inference
 # import modin.pandas as pd
 # import torch
@@ -26,6 +27,9 @@ from openxlab.model import inference
 #     img = Image.open(img)
 #     img = img.resize((value, value))
 #     return img
+openxlab.login(ak='8oyd01dywzrdgbvyea74',
+               sk='z2gkymdgadb3ro9zjk1ol9wm9vvwa5mqjnrexbpp',
+               re_login=True)
 
 
 def infer(source_img):
@@ -76,7 +80,6 @@ gr.Interface(
     ],
     outputs='image',
     title="Image to Image",
-    description=
-    "Test for 测试环境推理服务[inference-image2image](https://staging.openxlab.org.cn/models/detail/meijiawen1/inference-image2image)",
+    description="just test",
     article="模型中心推理服务test").queue(max_size=5).launch(max_threads=True,
                                                      debug=True)
