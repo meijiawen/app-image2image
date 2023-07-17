@@ -1,8 +1,9 @@
-torch
-numpy
-torchvision
-transformers
-accelerate
-ftfy
-git+https://github.com/huggingface/diffusers
-modin[all]
+# torch
+# numpy
+# torchvision
+# transformers
+# accelerate
+# ftfy
+# git+https://github.com/huggingface/diffusers
+# modin[all]
+Pillow
