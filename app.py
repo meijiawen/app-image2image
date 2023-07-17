@@ -76,6 +76,7 @@ gr.Interface(
     ],
     outputs='image',
     title="Image to Image",
-    description="just test",
+    description=
+    "Test for 测试环境推理服务[inference-image2image](https://staging.openxlab.org.cn/models/detail/meijiawen1/inference-image2image)",
     article="模型中心推理服务test").queue(max_size=5).launch(max_threads=True,
                                                      debug=True)
