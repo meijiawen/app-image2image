@@ -7,4 +7,3 @@
 # git+https://github.com/huggingface/diffusers
 # modin[all]
 Pillow
-openxlab-test
