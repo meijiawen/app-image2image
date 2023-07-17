@@ -1,7 +1,6 @@
 import gradio as gr
 from PIL import Image
 from io import BytesIO
-import openxlab
 from openxlab.model import inference
 # import modin.pandas as pd
 # import torch
